@@ -1,0 +1,9 @@
+*
+!.alias
+!.bash_profile
+!.bashrc
+!.functions
+!.git-completion.sh
+!.gitconfig
+!.gitignore
+!.vimrc
