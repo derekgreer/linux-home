@@ -1,69 +1,53 @@
 [user]
-        name = Derek Greer
-        email = dbgreer@themxgroup.com
+  name = Derek Greer
+  email = dbgreer@themxgroup.com
+
 [core]
-        filemode = true
-        editor = vim
-        autocrlf = true
-        askpass = git-gui--askpass
+  filemode = true
+  editor = vim
+  autocrlf = true
+  askpass = git-gui--askpass
 
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        interactive = auto
-        ui = true
-        pager = true
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
 
 [diff]
-        #tool = bc4
-        tool = kdiff3
+  tool = kdiff3
+
 [difftool]
-        prompt = false
+  prompt = false
 
 [difftool "kdiff3"]
-        #path = /usr/local/bin/kdiff3
-        path = /mnt/c/Program Files/KDiff3/kdiff3.exe
-        trustExitCode = false
-
-[difftool "bc4"]
-    # CYGWIN: use cygpath to transform cygwin path $LOCAL (something like /tmp/U5VvP1_abc) to windows path.
-    cmd = \"c:/Program Files (x86)/Beyond Compare 4/bcomp.exe\" "$LOCAL" "$REMOTE"
-
-[difftool "winmerge"]
-    name = WinMerge
-    trustExitCode = true
-    cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE
-
-[difftool "vscode"]
-      cmd = code --wait --diff $LOCAL $REMOTE
-
-[merge]
-        tool = kdiff3
-
-[mergetool]
-        keepBackup = false
-
-[mergetool "bc4"]
-        cmd = \"c:/Program Files (x86)/Beyond Compare 4/bcomp.exe\" "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
-
-[mergetool "kdiff3"]
-        path = /usr/local/bin/kdiff3
-        #path = C:/Program Files/KDiff3/kdiff3.exe
-        keepBackup = false
+  path = /mnt/c/Program Files/KDiff3/kdiff3.exe
   trustExitCode = false
 
-[mergetool "winmerge"]
-    name = WinMerge
-    trustExitCode = true
-    cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+  tool = kdiff3
+
+[mergetool]
+  keepBackup = false
+
+[mergetool "kdiff3"]
+  path = /mnt/c/Program Files/KDiff3/kdiff3.exe
+  keepBackup = false
+  keepTempporaries = false
+  trustExitCode = false
 
 [mergetool "vscode"]
-      cmd = code --wait $MERGED
+  cmd = code --wait $MERGED
 
 [push]
-        default = simple
-        followTags = true
+  default = simple
+  followTags = true
+
 [alias]
   aliases = config --get-regexp '^alias\\.'
   lns = log --name-status
@@ -85,17 +69,23 @@
   review = "!f() { git fetch origin \"$1\" ; git checkout \"$1\"; }; f"
   pw-reset = config --global credential.helper osxkeychain
   pw-reset-win = config --global credential.helper wincred
+
 [pull]
-        rebase = true
+  rebase = true
+
 [rerere]
-        enabled = true
+  enabled = true
+
 [winUpdater]
-        recentlySeenVersion = 2.20.1.windows.1
+  recentlySeenVersion = 2.20.1.windows.1
+
 [http]
-        sslVerify = false
+  sslVerify = false
+
 [credential]
         #helper = osxkeychain
         #helper = manager
         #helper = osxkeychain
+
 [remote "origin"]
   prune = true
