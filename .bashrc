@@ -19,8 +19,11 @@ set -o vi
  
 # Configure path
 PATH=.:~/bin:${PATH}  
+PATH=${PATH}:/mnt/c/Program\ Files/dotnet
 PATH=${PATH}:/mnt/c/ProgramData/chocolatey/bin
 PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Community/Common7/IDE/
+PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Professional/MSBuild/Current/Bin/amd64/
+PATH=${PATH}:/mnt/c/ProgramData/apache-maven-3.6.3/bin
 #PATH=${PATH}:/mnt/c/ProgramData/apache-maven-3.6.3/bin
 #PATH=${PATH}:/mnt/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/Professional/Common7/IDE/
 #PATH=${PATH}:/mnt/c/Program\ Files\ \(x86\)/Microsoft\ SDKs/Windows/v7.0A/Bin/x64/
@@ -34,8 +37,6 @@ PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Community/Comm
 
 export CYGWIN=nodosfilewarning
 
-export MYSHELL="CygwinBash"
-
 # Configure oh-my-posh
 #eval "$(oh-my-posh --init --shell bash --config c:/Users/derek.greer/scoop/apps/oh-my-posh/current/themes/powerline.omp.json)"
 #eval "$(oh-my-posh --init --shell bash --config c:/Users/derek.greer/scoop/apps/oh-my-posh/current/themes/agnosteromp.json)"
@@ -47,9 +48,6 @@ set bell-style visible
 # Source additional settings
 . ~/.alias  
 . ~/.functions  
-
-# Configure start folder
-cd /projects
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
