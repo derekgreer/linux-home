@@ -5,7 +5,7 @@
         filemode = true
         editor = vim
         autocrlf = true
-        #askpass = git-gui--askpass
+        askpass = git-gui--askpass
 
 [color]
         diff = auto
