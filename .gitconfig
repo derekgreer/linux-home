@@ -34,12 +34,11 @@
 
 [mergetool]
   keepBackup = false
+  keepTempporaries = false
+  trustExitCode = false
 
 [mergetool "kdiff3"]
   path = /mnt/c/Program Files/KDiff3/kdiff3.exe
-  keepBackup = false
-  keepTempporaries = false
-  trustExitCode = false
 
 [mergetool "vscode"]
   cmd = code --wait $MERGED
