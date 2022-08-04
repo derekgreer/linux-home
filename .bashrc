@@ -22,6 +22,7 @@ PATH=.:~/bin:${PATH}
 PATH=${PATH}:/mnt/c/Program\ Files/dotnet
 PATH=${PATH}:/mnt/c/ProgramData/chocolatey/bin
 PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Community/Common7/IDE/
+PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Professional/Common7/IDE
 PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Professional/MSBuild/Current/Bin/amd64/
 PATH=${PATH}:/mnt/c/ProgramData/apache-maven-3.6.3/bin
 #PATH=${PATH}:/mnt/c/ProgramData/apache-maven-3.6.3/bin
