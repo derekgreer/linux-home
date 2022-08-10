@@ -25,6 +25,7 @@
 [difftool "kdiff3"]
   path = /mnt/c/Program Files/KDiff3/kdiff3.exe
   trustExitCode = false
+  cmd = kdiff3.exe `wslpath -w $LOCAL` `wslpath -w $REMOTE`
 
 [difftool "vscode"]
   cmd = code --wait --diff $LOCAL $REMOTE
