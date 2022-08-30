@@ -3,7 +3,7 @@ unset TEMP
 
 export TMP=/tmp
 export TEMP=/tmp
-
+export EDITOR=vi
 export CONVENTIONAL_GITHUB_RELEASER_TOKEN=e9cd698f99b5dd775f751d84ef94038d96234362
 
 # Configure history
@@ -25,6 +25,7 @@ PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Community/Comm
 PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Professional/Common7/IDE
 PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Professional/MSBuild/Current/Bin/amd64/
 PATH=${PATH}:/mnt/c/ProgramData/apache-maven-3.6.3/bin
+PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Community/Common7/IDE/Extensions/Microsoft/Azure\ Storage\ Emulator/
 #PATH=${PATH}:/mnt/c/ProgramData/apache-maven-3.6.3/bin
 #PATH=${PATH}:/mnt/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/Professional/Common7/IDE/
 #PATH=${PATH}:/mnt/c/Program\ Files\ \(x86\)/Microsoft\ SDKs/Windows/v7.0A/Bin/x64/
@@ -43,7 +44,8 @@ export CYGWIN=nodosfilewarning
 #eval "$(oh-my-posh --init --shell bash --config c:/Users/derek.greer/scoop/apps/oh-my-posh/current/themes/agnosteromp.json)"
 
 # Configure alert style
-set bell-style visible
+set bell-style none
+#set bell-style visible
   
 
 # Source additional settings
