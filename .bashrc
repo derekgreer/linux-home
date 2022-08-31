@@ -6,6 +6,9 @@ export TEMP=/tmp
 export EDITOR=vi
 export CONVENTIONAL_GITHUB_RELEASER_TOKEN=e9cd698f99b5dd775f751d84ef94038d96234362
 
+# Enable WSL JavaScript hot reloading 
+export CHOKIDAR_USEPOLLING=1
+
 # Configure history
 HISTSIZE=2000
 HISFILESIZE=2000
@@ -14,16 +17,22 @@ export HISTCONTROL=ignorespace
 # Configure shell options
 shopt -s globstar
 
-
 set -o vi
  
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Configure path
 PATH=.:~/bin:${PATH}  
+PATH=${PATH}:~/.local/bin/
 PATH=${PATH}:/mnt/c/Program\ Files/dotnet
 PATH=${PATH}:/mnt/c/ProgramData/chocolatey/bin
+PATH=${PATH}:/mnt/c/Users/dgreer/AppData/Local/Programs/Microsoft\ VS\ Code/
 PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Community/Common7/IDE/
 PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Professional/Common7/IDE
 PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Professional/MSBuild/Current/Bin/amd64/
+PATH=${PATH}:/mnt/c/Program\ Files/KDiff3/
 PATH=${PATH}:/mnt/c/ProgramData/apache-maven-3.6.3/bin
 PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Community/Common7/IDE/Extensions/Microsoft/Azure\ Storage\ Emulator/
 #PATH=${PATH}:/mnt/c/ProgramData/apache-maven-3.6.3/bin
@@ -52,6 +61,3 @@ set bell-style none
 . ~/.alias  
 . ~/.functions  
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

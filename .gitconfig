@@ -1,6 +1,6 @@
 [user]
   name = Derek Greer
-  email = dbgreer@themxgroup.com
+  email = dgreer@themxgroup.com
 
 [core]
   filemode = true
@@ -63,7 +63,7 @@
   edit-config = config --global --edit
   diff-main = log --cherry-pick --oneline --no-merges --right-only main...HEAD
   diff-develop = log --cherry-pick --oneline --no-merges --right-only develop...HEAD
-  diff-branch = git log --cherry-pick --oneline --no-merges --right-only $1...HEAD
+  diff-branch = log --cherry-pick --oneline --no-merges --right-only $1...HEAD
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   review = "!f() { git fetch origin \"$1\" ; git checkout \"$1\"; }; f"
