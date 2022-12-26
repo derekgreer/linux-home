@@ -1,0 +1,78 @@
+#!/usr/bin/bash
+
+#----------------------------------------------------------------
+# Name        : rgrep - recursive grep
+#
+# Author      : Derek B. Greer
+#
+# Description : Performs grep recursively.  All dlls
+#               are treated as .Net assemblies and 
+#               the output of ildasm is used to
+#               perform the grep.
+#
+# Examples 
+# --------
+# Recursively grep all files for 'should replace'
+#
+# > rgrep -l 'should replace'  '*'
+# ./SpecUnit-0.1.35.27/SpecUnit.Specs.html
+#
+#
+# Recursively grep all assemblies for ConcernAttribute:
+#
+# > rgrep -l ConcernAttribute '*.dll'
+# ./SpecUnit-0.1.35.27/SpecUnit.dll
+#
+#----------------------------------------------------------------
+
+typeset -i VERBOSE=1
+DIRECTORY='.'
+
+while getopts d:ilv option
+do
+    case $option in
+
+    l) VERBOSE=0
+    	;;
+
+    v)  OPTION=-v
+        ;;
+
+    i) OPTI=-i
+    	;;
+
+    d)  DIRECTORY="${OPTARG:-.}"
+        ;;
+
+    esac
+done
+
+# Skip passed the options
+shift `expr $OPTIND - 1`
+
+
+MATCH_REGEX="$1"
+FILE_REGEX="$2"
+ILDASM='/mnt/c/Program Files (x86)/Microsoft SDKs/Windows/v10.0A/bin/NETFX 4.8 Tools/ildasm.exe'
+IFS='
+'
+
+for file in $(find "${DIRECTORY}" -type d -name ".git" -prune -o -type f -name "${FILE_REGEX}" -print)
+do
+	if [[ "${file##*.}"  ==  "dll" ]]
+	then
+		RES=$("${ILDASM}" /text ${file} | grep ${OPTI} "$MATCH_REGEX")
+
+	else
+		RES=$(grep ${OPTI} "$MATCH_REGEX" ${file})
+	fi
+
+	if (( $? == 0 ))
+	then
+		(( VERBOSE == 1 )) && echo -e "\\033[1m\E[36m[${file}]\\033[0m"
+		(( VERBOSE == 0 )) && echo "${file}"
+		(( VERBOSE == 1 )) && RES2=$(echo $RES | sed -e 's/\\/\\\\/g' -e "s/\($MATCH_REGEX\)/\\\\033[1m\\\\E[34m\1\\\\033[0m/g")
+		(( VERBOSE == 1 )) && echo -e "$RES2"
+		(( VERBOSE == 1 )) && echo
+	fi
+done
