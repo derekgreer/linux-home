@@ -35,7 +35,6 @@ alias temp='cd /cygdrive/c/temp'
 alias ls='ls --color'
 alias msysgit='c:/Program\ Files\ \(x86\)/Git/bin/git'
 alias sshgit='ssh git@bsc1wddbsbld01'
-alias gitk='/cygdrive/c/Program\ Files/Git/cmd/gitk'
 alias examples='cd /projects/Examples/'
 alias cs='cd /projects/Examples/CSharp'
 alias ul='cd /projects/ulog'
@@ -107,8 +106,14 @@ alias cmd='cmd.exe'
 # Click N' Close
 alias intake='cd /projects/mm-imaging-intake'
 
+
+# Git commands
+alias gitk='/mnt/c/Program\ Files/Git/cmd/gitk.exe'
+
 # The MX Group
 alias services='cd /projects/ccg.services'
 alias frontend='cd /projects/ccg.frontend'
 alias ui='cd /projects/ccg.frontend'
 alias ccg='cd /projects/ccg'
+alias fac='cd /projects/facmanager.com'
+alias iw='cd /projects/ccg.image-watchers'

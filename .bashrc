@@ -5,6 +5,7 @@ export TMP=/tmp
 export TEMP=/tmp
 export EDITOR=vi
 export CONVENTIONAL_GITHUB_RELEASER_TOKEN=e9cd698f99b5dd775f751d84ef94038d96234362
+export APPDATA=/mnt/c/Users/dgreer/AppData/Roaming/
 
 # Enable WSL JavaScript hot reloading 
 export CHOKIDAR_USEPOLLING=1
