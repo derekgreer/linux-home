@@ -27,6 +27,7 @@ export NVM_DIR="$HOME/.nvm"
 # Configure path
 PATH=.:~/bin:${PATH}  
 PATH=${PATH}:~/.local/bin/
+PATH=${PATH}:/mnt/c/Program\ Files/Docker/Docker/resources/bin/
 PATH=${PATH}:/mnt/c/Program\ Files/dotnet
 PATH=${PATH}:/mnt/c/ProgramData/chocolatey/bin
 PATH=${PATH}:/mnt/c/Users/dgreer/AppData/Local/Programs/Microsoft\ VS\ Code/
@@ -36,6 +37,7 @@ PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Professional/M
 PATH=${PATH}:/mnt/c/Program\ Files/KDiff3/
 PATH=${PATH}:/mnt/c/ProgramData/apache-maven-3.6.3/bin
 PATH=${PATH}:/mnt/c/Program\ Files/Microsoft\ Visual\ Studio/2022/Community/Common7/IDE/Extensions/Microsoft/Azure\ Storage\ Emulator/
+PATH=${PATH}:/mnt/c/Program\ Files\ \(x86\)/Microsoft\ SDKs/Windows/v10.0A/bin/NETFX\ 4.8\ Tools/
 #PATH=${PATH}:/mnt/c/ProgramData/apache-maven-3.6.3/bin
 #PATH=${PATH}:/mnt/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/Professional/Common7/IDE/
 #PATH=${PATH}:/mnt/c/Program\ Files\ \(x86\)/Microsoft\ SDKs/Windows/v7.0A/Bin/x64/

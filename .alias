@@ -102,6 +102,7 @@ alias dotnet='dotnet.exe'
 alias terraform='terraform.exe'
 alias msbuild='msbuild.exe'
 alias cmd='cmd.exe'
+alias kubectl='kubectl.exe'
 
 # Click N' Close
 alias intake='cd /projects/mm-imaging-intake'
@@ -115,5 +116,9 @@ alias services='cd /projects/ccg.services'
 alias frontend='cd /projects/ccg.frontend'
 alias ui='cd /projects/ccg.frontend'
 alias ccg='cd /projects/ccg'
-alias fac='cd /projects/facmanager.com'
-alias iw='cd /projects/ccg.image-watchers'
+
+# Click N' Close
+alias loan='cd /projects/loan-service'
+alias loans='cd /projects/loan-service'
+alias access='cd /projects/access-service'
+
