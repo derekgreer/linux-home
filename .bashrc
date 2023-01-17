@@ -25,7 +25,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Configure path
-PATH=.:~/bin:${PATH}  
+PATH=.:~/bin:${PATH} 
 PATH=${PATH}:~/.local/bin/
 PATH=${PATH}:/mnt/c/Program\ Files/Docker/Docker/resources/bin/
 PATH=${PATH}:/mnt/c/Program\ Files/dotnet
